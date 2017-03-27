@@ -4,18 +4,50 @@
     <title>The AJAXson 5</title>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="request-gif.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <h1>The AJAXson 5</h1>
+  <div class="container-fluid">
 
-    <form id="form-gif-request" />
-        <label>What kind of Jackson 5 related gif do you want?</label>
-        <input name="tag" type="text"/>
-        <input type="submit" value="Get my Gif!" />
-    </form>
+    <div class="heading">
+      <h1 class="text-center text-bold"><strong>AJAXson 5</strong></h1>
+    </div>
 
-    <img id="gif" src="" hidden="true"/>
-    <p id="feedback" hidden="true`"></p>
+    <div class="row">
+        <form id="form-gif-request" />
+            <div class="row" id="div1">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <label>What kind of Jackson 5 related gif do you want?</label>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <input name="tag" type="text"/>
+                </div>
+            </div>
+            <div class="row" id="div2">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <p><strong>Prove that you are not a robot by answering this riddle:</strong></p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <input name="robot" type="text"/>
+                  <span class="" id="jacksonerror">Jacksons are better than 1</span>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <p class="text-danger" id="error"></p>
+                </div>
+            </div>
+            <div class="row" id="div3">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <button class="btn btn-primary">Get my Gif!</button>
+                </div>
+            </div>
+        </form>
+    </div>
 
+    <div class="text-center">
+      <img id="gif" src="" class="img-responsive center-block" hidden="true"/>
+      <p class="text-danger" id="feedback" hidden="true"></p>
+    </div>
+  </div>
 </body>
 </html>
